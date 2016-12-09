@@ -1,0 +1,23 @@
+name: Information Security
+summary: Information security is often an overlooked aspect of digital preservation. It requires some knowledge of the characteristics of your operating system, and is often entangled with the administration of digital asset management systems. Sometimes, the ability to progress up the levels can be helped or hindered by the systems in which you choose to manage your digital content.
+level-1:
+    - text: Identify who has read, write, move and delete authorization to individual files
+    - text: Restrict who has those authorizations to individual files
+level-2:
+    - text: Document access restrictions for content
+level-3:
+    - text: Maintain logs of who performed what actions on files, including deletions and preservation actions
+level-4:
+    - text: Perform audit of logs
+step-1: Most modern file systems allow for some level of user/administration control. The majority of Orbis-Cascade members have already achieved this level of information security. The best tools for moving from level 0 to level 1 are most likely interpersonal; get to know who manages your computers. If you manage your own, make sure your computer is password protected. Ask DAMS managers who has access to what files. Talk with your colleagues to find out who works with your digital files, and have a conversation to determine who has access to content, and, most crucially, who has permissions to delete or move content from one place to another.
+step-2: Some DAMS have the ability to provide different levels of access to content. For example, you might have materials that are made freely and openly available via the internet. You might also have some content that is restricted to authenticated users via Shibboleth or another identity solution. Still further, some material may be restricted to only on-campus, or on-premises use. Lastly, some content may not be intended to be accessible by anyone other than Library staff. This could consist of high-quality digital master files, archival materials that need to be redacted for privacy or security concerns before use, and others. Documenting these access restrictions, while the restrictions themselves are often enforced by current computer systems, is important to consider because current reasons for such restrictions might not always be so obvious. Documenting these decisions and the reasons behind them allows someone in the future to interpret the decision, understand the reasoning, and potentially adopt a change if necessary.
+step-3: It is important to maintain a record of what happens to files in order to provide both provenance and continuity. Digital files are very easy to change, and keeping track of what changes have been made can help maintain the integrity of a set of files. This can be done in a number of ways, through a number of techniques, but most important is to get into the habit of doing so. Lightweight examples might include- noting how images are scanned and manipulated in post-processing and including de-duplication notes in a finding aid for a digital collection. Again, maintaining a record of changes can be made easier by choosing a DAMS that allows for this sort of logging. Some logs might also be kept by the system administrators and a conversation can help you understand if and how this information is collected. Using a tool like Archivematica to process and manage your preservation master files can help keep track of preservation actions.
+step-4: Performing regular audits of logs can help ensure that the choices and safeguards that you have put in place are working as expected.
+resources:
+    - name: NDSA Blog
+      url: https://blogs.loc.gov/thesignal/2014/04/protect-your-data-information-security-and-the-boundaries-of-your-storage-system/
+      description: offers some practical, foundational information for understanding the importance of Information Security in a digital preservation context, and is a great place to start learning
+    
+    - name: Digital Preservation Coalition (DPC) Handbook
+      url: http://handbook.dpconline.org/technical-solutions-and-tools/information-security
+      description: easy-to-follow handbook on the topic

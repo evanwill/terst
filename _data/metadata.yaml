@@ -1,0 +1,23 @@
+name: Metadata
+level-1:
+    - text: Identify who has read, write, move and delete authorization to individual files
+    - text: Restrict who has those authorizations to individual files
+level-2:
+    - text: Document access restrictions for content
+    - text: Document your storage system(s) and storage media and what you need to use them
+level-3:
+    - text: At least one copy in a geographic location with a different disaster threat
+    - text: Obsolescence monitoring process for your storage system(s) and media
+level-4:
+    - text: At least three copies in geographic locations with different disaster threats
+    - text: Have a comprehensive plan in place that will keep files and metadata on currently accessible media or systems
+step-1:
+step-2:
+step-3:
+step-4:
+resources:
+    - name:
+        url:
+    
+    - name:
+        url:

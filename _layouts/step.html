@@ -1,0 +1,116 @@
+---
+layout: default
+---
+<div class="home">
+
+  <h1>{{ page.title}}</h1>
+
+
+<div class="row">
+			<div class="col-lg-8">
+			<h3>Summary/Best Practices</h3>
+
+			<div class="summary">{% include {{ page.path }}/summary.html %}</div>
+     </div>
+    <div class="col-lg-4 pull-right">
+{% if [page.path] == metadata %}
+{% include defmeta.html %}
+ {% else %}
+    <div class="panel panel-default ">
+  <div class="panel-heading">
+    <h3 class="panel-title">More Resources</h3>
+  </div>
+  <div class="panel-body">
+  <ul>
+{% for resource in site.data.page.path.resources %}
+  <li>
+    <a href="{{resource.url}}">{{ resource.name }}</a>
+     </li>
+{% endfor %}
+</ul>
+               
+  </div>
+</div>
+
+ {% endif %}
+
+
+</div>
+</div>
+
+<div class="row">
+	<h1>{{ page.title}} - Step by Step</h1>
+ <ul class="nav nav-tabs">
+    <li class="active"><a data-toggle="tab" href="#tab1">Level 0 to Level 1</a></li>
+    <li><a data-toggle="tab" href="#tab2">Level 1 to Level 2</a></li>
+    <li><a data-toggle="tab" href="#tab3">Level 2 to Level 3</a></li>
+    <li><a data-toggle="tab" href="#tab4">Level 3 to Level 4</a></li>
+  </ul>
+
+  <div class="tab-content">
+    <div id="tab1" class="tab-pane fade in active">
+      <h3>Level 0 to Level 1</h3>
+      <ul >
+{% for bullet in site.data.page.path.level-1 %}
+  <li class="step-reminder">
+    
+      {{ bullet.text }}
+     
+   
+  </li>
+{% endfor %}
+</ul>
+		  {% include {{ page.path }}/step1.html %}
+ 
+    </div>
+    <div id="tab2" class="tab-pane fade">
+      <h3>Level 1 to Level 2</h3>
+       <ul >
+{% for bullet in site.data.page.path.level-2 %}
+  <li class="step-reminder">
+    
+      {{ bullet.text }}
+     
+   
+  </li>
+{% endfor %}
+</ul>
+			  {% include {{ page.path }}/step2.html %}
+			 
+    </div>
+    <div id="tab3" class="tab-pane fade">
+      <h3>Level 2 to Level 3</h3>
+       <ul >
+{% for bullet in site.data.page.path.level-3 %}
+  <li class="step-reminder">
+    
+      {{ bullet.text }}
+     
+   
+  </li>
+{% endfor %}
+</ul>
+      {% include {{ page.path }}/step3.html %}
+    </div>
+    <div id="tab4" class="tab-pane fade">
+      <h3>Level 3 to Level 4</h3>
+       <ul >
+{% for bullet in site.data.page.path.level-4 %}
+  <li class="step-reminder">
+    
+      {{ bullet.text }}
+     
+   
+  </li>
+{% endfor %}
+</ul>
+      {% include {{ page.path }}/step4.html %}
+    </div>
+  </div>
+  <br />
+  <br />
+{% include oneleveltable.html %}
+			</div>
+
+</div>
+

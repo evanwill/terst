@@ -1,0 +1,37 @@
+<p>Depending on where your items are stored, you may be able to use some of the following tools to inventory file formats. Several graphical and command line tools are available for file identification, including <a href="http://www.nationalarchives.gov.uk/information-management/manage-information/preserving-digital-records/droid/">DROID</a>, <a href="http://jhove.openpreservation.org/">JHOVE</a> and <a href="http://fitstool.org/">FITS</a>. For a quick and dirty inventory of file extensions and basic file types the unix command line programs &ldquo;find&rdquo; and &ldquo;file&rdquo; can be used.</p>
+
+<table style="width:90%; margin:0 auto;">
+<tbody>
+<tr>
+<td colspan="2">
+<p>prompt&gt;<em> find . -name "*.jpg" |wc -w</em></p>
+<p>Returns the number of files with a .jpg extension at or below the current directory.  Replace .jpg with any file extension you are interested in inventorying.  This only reports on file extensions, and does not test if the file is actually of that type.</p>
+<p> </p>
+</td>
+</tr>
+<tr>
+<td colspan="2">
+<p>prompt&gt;<em> find . -name "*.jpg" -exec file {} \;</em></p>
+<p>Returns a list of files with the .jpg extension and their &lsquo;file&rsquo; type at or below the current directory.  Replace .jpg with any file extension you are interested in inventorying. </p>
+<p> </p>
+</td>
+</tr>
+</tbody>
+</table>
+<br/
+<h3>For Users of DSpace and ContentDM </h3>
+<p><strong>DSpace </strong>- users of DSpace can inventory files using the &ldquo;Profile Bitstream Formats&rdquo; from admin page: http://{YourDSpaceServer}/xmlui/admin/curate :</p>
+<img src="/images/image03.png">
+<br/ >
+
+<p>Or the DSpace postgres database can be queried directly. Below are some sample sql queries:</p>
+<div class="indent"><p><strong>--Number of items and format description. </strong> </p>
+<p class="smaller">SELECT bitstreamformatregistry.short_description, COUNT(*) FROM item, item2bundle, bundle2bitstream, bitstream, bitstreamformatregistry WHERE item.in_archive = 't' AND item.item_id = item2bundle.item_id AND item2bundle.bundle_id = bundle2bitstream.bundle_id AND bundle2bitstream.bitstream_id = bitstream.bitstream_id AND bitstream.bitstream_format_id = bitstreamformatregistry.bitstream_format_id GROUP BY bitstreamformatregistry.short_description;</p>
+<img src="/images/image00.png">
+<p><strong>--Number of bitstreams for format type, e.g. 4 (PDF):</strong></p>
+<p class="smaller">SELECT COUNT(*) FROM item, item2bundle, bundle2bitstream, bitstream WHERE item.in_archive = 't' AND item.item_id = item2bundle.item_id AND item2bundle.bundle_id = bundle2bitstream.bundle_id AND bundle2bitstream.bitstream_id = bitstream.bitstream_id AND bitstream.bitstream_format_id = 4;</p>
+<img src="/images/image01.png">
+</div>
+<br/><br />
+<p><strong>CONTENTdm</strong> users can use Reports: (Collections / Reports / Item Types)</p>
+<img src="/images/image04.png">

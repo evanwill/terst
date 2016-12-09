@@ -1,0 +1,43 @@
+---
+layout: default
+---
+
+
+<h2>Introduction</h2>
+
+
+<div class="row">
+			<div class="col-lg-8">
+			 {{ content }}
+     </div>
+    <div class="col-lg-4 pull-right">
+    <div class="panel panel-default ">
+  <div class="panel-heading">
+    <h3 class="panel-title">Central Ideas</h3>
+  </div>
+  <div class="panel-body">
+  <ul>
+{% for resource in site.data.ideas %}
+  <li>
+    <a href="{{resource.url}}">{{ resource.title }}</a> - {{ resource.description }}
+     </li>
+{% endfor %}
+</ul>
+               
+  </div>
+</div>
+</div>
+</div>
+<p class="center " >
+  {% for my_page in site.pages  %}
+          {% if my_page.title %}
+          <a class="page-link button" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a>
+          {% endif %}
+        {% endfor %}</p>
+<hr />
+<h3>Original National Digital Stewardship Alliance Levels of Digital Preservation Table</h3>
+
+   {% include fulltable.html %}
+  </div>
+
+</article>

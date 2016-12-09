@@ -1,0 +1,32 @@
+name: File Fixity and Data Integrity
+level-1: 
+    - text: Check file fixity on ingest if it has been provided with the content
+    - text: Create fixity info if it wasn’t provided with the content
+level-2: 
+    - text: Check fixity on all ingests
+    - text: Use write-blockers when working with original media
+    - text: Virus-check high risk content
+level-3: 
+    - text: Check fixity of content at fixed intervals
+    - text: Maintain logs of fixity info; supply audit on demand
+    - text: Ability to detect corrupt data - Virus-check all content
+level-4: 
+    - text: Check fixity of all content in response to specific events or activities
+    - text: Ability to replace/repair corrupted data
+    - text: Ensure no one person has write access to all copies
+step-1:
+step-2:
+step-3:
+step-4:
+resources:
+    - name: Walk This Way- Detailed Steps for Transferring Born-Digital Content from Media You Can Read In-house
+      url: http://www.oclc.org/content/dam/research/publications/library/2013/2013-02.pdf
+
+    - name: Fixity and Checksums Section of Digital Preservation Coalition Handbook
+      url: http://handbook.dpconline.org/technical-solutions-and-tools/fixity-and-checksums
+       
+    - name: Checking Your Digital Content
+      url: http://www.digitalpreservation.gov/documents/NDSA-Fixity-Guidance-Report-final100214.pdf
+   
+    - name: NDSA Archiving Levels Original Paper
+      url: http://www.digitalpreservation.gov/documents/NDSA_Levels_Archiving_2013.pdf

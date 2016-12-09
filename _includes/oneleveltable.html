@@ -1,0 +1,76 @@
+<table>
+<tbody>
+<tr>
+<th>
+ 
+</th>
+<th>
+<p><span  >Level 1 (Protect your data)</span></p>
+</th>
+<th>
+<p><span  >Level 2 (Know your data) </span></p>
+</th>
+<th>
+<p><span  >Level 3 (Monitor your data)</span></p>
+</th>
+<th>
+<p><span  >Level 4 (Repair your data) </span></p>
+</th>
+</tr>
+<tr>
+<td>
+<p class="center">{{ page.title}}</p>
+ 
+</td>
+<td>
+<ul>
+{% for bullet in site.data.[page.path].level-1 %}
+  <li>
+    
+      {{ bullet.text }}
+     
+   
+  </li>
+{% endfor %}
+</ul>
+</td>
+<td>
+<ul>
+{% for bullet in site.data.[page.path].level-2 %}
+  <li>
+    
+      {{ bullet.text }}
+     
+   
+  </li>
+{% endfor %}
+</ul>
+</td>
+<td>
+<ul>
+{% for bullet in site.data.[page.path].level-3 %}
+  <li>
+    
+      {{ bullet.text }}
+     
+   
+  </li>
+{% endfor %}
+</ul>
+</td>
+<td>
+  <ul>
+{% for bullet in site.data.[page.path].level-4 %}
+  <li>
+    
+      {{ bullet.text }}
+     
+   
+  </li>
+{% endfor %}
+</ul>
+</td>
+</tr>
+</tbody>
+    <br />
+</table>

@@ -1,0 +1,8 @@
+<p>In addition to checking fixity during ingests/transfers and on a regular schedule, it is also recommended to check fixity during the production or digitization processes. Files may move through a number of workstations depending on the level of quality control and additional processes in place. File movement fixity checks ensure that files are transferred intact and unchanged. It is also important to check the fixity of content in response to specific events such as hardware failure or security breaches.
+</p>
+<p>
+Some file systems such as ZFS and CEPH have built-in fixity checks so that data is checked on a regular basis. If damage does occur, these systems have storage redundancy and self-healing features that can discern which copy of a file is correct and then overwrite the damaged one. If system-level auto checking is not an option, you can compare fixity logs using any number of tools that can compare files and highlight the differences in checksum values. You can then work to repair/replace the corrupted file.
+</p>
+<p>
+Formally establishing administrative roles, responsibilities, and authorizations for your systems would be a way to ensure that no one person has write access to all copies of a file. This would safeguard against accidental deletion. The three major operating systems, Windows, macOS, and Ubuntu, all have sophisticated file/folder permissions settings. 
+</p>

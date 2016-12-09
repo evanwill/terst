@@ -1,0 +1,18 @@
+- title: Digital Preservation Plan
+  url: 
+  description: Creating a digital preservation plan will help you fulfill many of these recommendations.  
+- title: Additional Storage
+  url: 
+  description: Adding another copy of your archive is important; moving that copy to a different region with a different disaster type is also important. 
+- title: Chain of Trust
+  url: 
+  description: File fixity and data integrity is geared towards establishing a chain of trust in the lifecycle of your archival files.  
+- title: Inventories
+  url: 
+  description: Creating inventories of files, file formats, and meatadata is a great start to your practice
+- title: Logs and Permissions
+  url: 
+  description: Record and identify permissions for users and log security and transformation events for your files. 
+- title: File Formats
+  url: 
+  description: Know which formats are open and built for use now and in the future. 
